@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="website icon" type="png" href="static/images/icon.png">
+    <title>Music Genre Classifier | Let's Guess The Music Genre</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    
+     <!-- ############################### HOME SECTION ###############################  -->
+
+    <section class="home" id="home">
+        <div class="nav-bar">
+            <img src="static/images/muzec_logo.png" alt="logo" class="logo">
+            <ul>
+                <li><a href="#home" class="nav-link">HOME</a></li>
+                <li><a href="#about" class="nav-link">ABOUT</a></li>
+                <li><a href="#service" class="nav-link">SERVICE</a></li>
+                <li><a href="#contact" class="nav-link">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <div class="home-title-container">
+            <h1>Let's Guess The Music Genre</h1>
+            <a href="#service">Play</a>
+        </div>
+    </section>
+
+     <!-- ############################### ABOUT SECTION ###############################  -->
+
+    <section class="about-section" id="about">
+        <h2 class="section-title">About</h2>
+        <div class="about__container bd-grid">
+            <div class="about__img">
+                <img src="static/images/Music logo.png" alt="">
+            </div>
+            
+            <div>
+                <h2 class="about__subtitle">Muzec Predictor</h2>
+                <p class="about__text">Muzec Predictor is an advanced music genre classifier designed to automatically categorize and label audio tracks into specific genres. 
+                    Leveraging machine learning algorithms and signal processing techniques, 
+                    Muzec Predictor analyzes various audio features such as tempo, RMS Energy, Spectral Centroid, and chorma etc..., to determine the genre of a given track. 
+                    Its predictive capabilities are refined through extensive training on diverse music datasets, allowing it to accurately classify
+                    music across a wide range of genres including blues, classical, country, disco, hip- hop, jazz, metal, pop, reggae, and rock. Muzec Predictor serves as a 
+                    valuable tool for music recommendation systems, playlist generation, and music discovery platforms, 
+                    offering users a seamless and personalized listening experience based on their genre preferences.</p>           
+            </div>                                   
+        </div>
+    </section>
+
+     <!-- ############################### SERVICE SECTION ###############################  -->
+
+    <section class="service-section" id="service">
+        <h2 class="section-title">Service</h2>
+        <div class="service-container">
+            <div class="service-content">
+                <p><b>Unlock the Musical Essence</b> <br> Share Your Favorite Tune and Reveal Its Genre with the Tap of a Button Below!</p>
+                <div class="service__audio">
+                    <!-- <form action="/upload" method="post" enctype="multipart/form-data">
+                        <label for="audioFile">Select your song</label>
+                        <input type="file" id="audioFile" name="audioFile" accept="audio/*" required>
+                        <button type="submit" class="classifier">Get the Genre</button>
+                        
+                    </form> -->
+                    <form action="/upload" method="POST" id="uploadForm" enctype="multipart/form-data">
+                        <label for="audioFile">
+                          <!-- <i class="bx bx-upload"></i> -->
+                          Get the Genre
+                        </label>
+                        <input id="audioFile" type="file" name="file" accept="audio/*"  style="display: none;" onchange="fileUpload()"/>
+                      </form>  
+ 
+                </div>
+                {% if prediction %}
+                <div class="predicted-genre">The predicted Genre is <h2>{{ prediction }}</h2></div>
+                {% endif %}
+
+                <div class="error-container">
+                    {% for error in errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                  </div>
+            </div>
+        </div>
+    </section>
+    
+
+     <!-- ############################### CONTACT SECTION ###############################  -->
+
+    <div class="container" id="contact">
+			<section class="col left">
+                <div class="contactTitle">
+                    <h3 class="form-title">
+                        About Us
+                    </h3>
+					<p>Hey! I'm houda Moudni, data engineering student at ENSA.</p>
+				</div>
+				<div class="contactInfo">
+					
+					<div class="iconGroup">
+						<div class="icon">
+							<i class="fa-solid fa-phone"></i>
+						</div>
+						<div class="details">
+							<span>Phone</span>
+							<span>+(212)6-05998775</span>
+						</div>
+					</div>
+
+					<div class="iconGroup">
+						<div class="icon">
+							<i class="fa-solid fa-envelope"></i>
+						</div>
+						<div class="details">
+							<span>Email</span>
+							<span>houda.moudni@etu.uae.ac.ma</span>
+						</div>
+					</div>
+
+					<div class="iconGroup">
+						<div class="icon">
+							<i class="fa-solid fa-location-dot"></i>
+						</div>
+						<div class="details">
+							<span>Location</span>
+							<span>Casablanca, Casablanca-Settat, Maroc</span>
+						</div>
+					</div>
+				</div>
+			</section>
+            
+          <!-- ############################### FORM SECTION ###############################  -->   
+			<section class="col right">
+                <h3 class="form-title">
+                    Let's Stay Connected
+                </h3>
+
+				<form action="/email" method="post" class="messageForm" >
+                    <input type="email" name="email" id="Email" class="form__email" placeholder="Enter your email">
+                    <button type="submit" class="form__submit">Submit</button>
+                </form>
+
+                <h3 class="form-title">
+                    Follow Us
+                </h3>
+                <div class="socialMedia">
+                    <a href="https://www.facebook.com/byunhouda.baek"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://github.com/houda-moudni"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/houda-moudni"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>   
+				
+			</section>
+
+             <!-- ############################### LINK SECTION ###############################  -->
+
+            <section class="footer-link">
+                <h3 class="form-title">
+                   Util Links
+                </h3>
+                <ul>
+                    <li><a href="#home" class="footer-link">Home</a></li>
+                    <li><a href="#about" class="footer-link">About</a></li>
+                    <li><a href="#service" class="footer-link">Service</a></li>
+                </ul>
+            </section>
+        </div>
+
+             <!-- ############################### FOOTER SECTION ###############################  -->
+        
+        <footer class="footer"> <p><img src="static/images/muzec_logo.png"> </p>&copy; All Right Are Reserved</footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        function fileUpload() {
+    document.getElementById('uploadForm').submit();
+}
+
+
+</script>
+</body>
+</html>
