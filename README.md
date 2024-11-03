@@ -50,7 +50,7 @@ Here’s a model comparison table based on the project information provided:
     **Structure**:
       **Home**: Introduction to Muzec
       
-   ![image](https://github.com/houdamoudni/MusicGenreClassification/blob/main/static/images/Screens/home_page.png)
+   ![image](https://github.com/houdamoudni/Music-Genre-Classification/blob/main/static/images/Screens/home_page.png)
       **About**: An overview of how the project works.
      
    ![image](https://github.com/houdamoudni/MusicGenre-Classification/blob/main/static/images/Screens/about_page.png)
