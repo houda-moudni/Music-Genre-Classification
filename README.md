@@ -11,8 +11,8 @@
 
 ### 2. Extracting Features from Audio Files
    Audio files are complex, and the raw waveforms don’t provide direct insight into genre. Feature extraction translates these files into data the model can interpret.
-   - **Tool**: We use the `Librosa` library in Python for this step.
-   - **Features Extracted**:
+      - **Tool**: We use the `Librosa` library in Python for this step.
+      - **Features Extracted**:
 - **Tempo**: Speed of the music in beats per minute (BPM). 
 - **RMS (Root Mean Square Energy)**: Average energy level of the audio signal, indicating loudness.
 - **ZCR (ZeroCrossing Rate)**: Frequency with which the signal changes from positive to negative, often used to detect percussive sounds.
@@ -24,7 +24,7 @@
 - **Chroma**: Representation of the energy in each of the 12 musical pitches, disregarding octave, capturing harmonic elements.
 - **STFT (Short-Time Fourier Transform)**: Time-frequency representation of the signal, analyzing how frequency components evolve over time.
 - **MFCC (Mel-Frequency Cepstral Coefficients)**: Encodes the timbral qualities of the sound, useful for identifying vocal and instrument characteristics.
-   - **Storing Features**: After extraction, features from each clip are saved in a structured CSV file. This file is then used as the input data for the model.
+      - **Storing Features**: After extraction, features from each clip are saved in a structured CSV file. This file is then used as the input data for the model.
 
 ### 3. Building and Training the Model
    - **Goal**: Train a model to classify music genres based on the extracted features.
