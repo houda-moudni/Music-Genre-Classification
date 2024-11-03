@@ -45,22 +45,19 @@ Here’s a model comparison table based on the project information provided:
    - **Library Used**: `pickle` in Python, which serializes the model, allowing it to be reloaded without retraining.
 
 ### 5. Building the Web Application
-   - **Framework**: Flask (Python) serves as the backend to handle requests and load the machine learning model.
-   - **Frontend**: HTML, CSS, and JavaScript are used to create an interactive web interface.
-   - **Structure**:
-     - **Home**: Introduction to Muzec
-     - 
-   ![image](https://github.com/houda-moudni/Music-Genre-Classification/blob/main/static/images/Screens/home_page.png)
-
-     - **About**: An overview of how the project works
-       
-   ![image](https://github.com/houda-moudni/Music-Genre-Classification/blob/main/static/images/Screens/about_page.png)
-   
-     - **Service**: Where users can upload an audio file or input a YouTube URL for analysis. This section extracts the audio features and uses the model to predict the genre
+   **Framework**: Flask (Python) serves as the backend to handle requests and load the machine learning model.
+    **Frontend**: HTML, CSS, and JavaScript are used to create an interactive web interface.
+    **Structure**:
+      **Home**: Introduction to Muzec
+      
+   ![image](https://github.com/houdamoudni/MusicGenreClassification/blob/main/static/images/Screens/home_page.png)
+      **About**: An overview of how the project works.
+     
+   ![image](https://github.com/houdamoudni/MusicGenre-Classification/blob/main/static/images/Screens/about_page.png)
+      **Service**: Where users can upload an audio file or input a YouTube URL for analysis. This section extracts the audio features and uses the model to predict the genre
      
    ![image](https://github.com/houda-moudni/Music-Genre-Classification/blob/main/static/images/Screens/service_page.png)
-   
-     - **Contact**: Developer contact information
+      **Contact**: Developer contact information
      
    ![image](https://github.com/houda-moudni/Music-Genre-Classification/blob/main/static/images/Screens/contact_page.png)
     
