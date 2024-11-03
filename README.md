@@ -11,8 +11,8 @@
 
 ### 2. Extracting Features from Audio Files
    Audio files are complex, and the raw waveforms don’t provide direct insight into genre. Feature extraction translates these files into data the model can interpret.
-      - **Tool**: We use the `Librosa` library in Python for this step.
-      - **Features Extracted**:
+   - **Tool**: We use the `Librosa` library in Python for this step.
+   - **Features Extracted**:
 - **Tempo**: Speed of the music in beats per minute (BPM). 
 - **RMS (Root Mean Square Energy)**: Average energy level of the audio signal, indicating loudness.
 - **ZCR (ZeroCrossing Rate)**: Frequency with which the signal changes from positive to negative, often used to detect percussive sounds.
