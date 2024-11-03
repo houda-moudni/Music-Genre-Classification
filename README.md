@@ -13,17 +13,17 @@
    Audio files are complex, and the raw waveforms don’t provide direct insight into genre. Feature extraction translates these files into data the model can interpret.
    - **Tool**: We use the `Librosa` library in Python for this step.
    - **Features Extracted**:
-**Tempo**: Speed of the music in beats per minute (BPM). \n
-**RMS (Root Mean Square Energy)**: Average energy level of the audio signal, indicating loudness.
-**ZCR (ZeroCrossing Rate)**: Frequency with which the signal changes from positive to negative, often used to detect percussive sounds.
-**Harmonic Component**: Part of the signal with consistent, harmonic frequencies (melody).
-**Percussive Component**: Part of the signal with abrupt changes, often representing drum or beat sounds.
-**Spectral Centroid**: The "center of mass" of the spectrum, associated with the perceived brightness of a sound.
-**Spectral Bandwidth**: Range of frequencies present in the sound, often associated with texture or timbre.
-**Spectral Roll-off**: Frequency below which a set percentage (usually 85%) of the signal energy is contained, indicating the "edge" of the spectrum.
-**Chroma**: Representation of the energy in each of the 12 musical pitches, disregarding octave, capturing harmonic elements.
-**STFT (Short-Time Fourier Transform)**: Time-frequency representation of the signal, analyzing how frequency components evolve over time.
-**MFCC (Mel-Frequency Cepstral Coefficients)**: Encodes the timbral qualities of the sound, useful for identifying vocal and instrument characteristics.
+- **Tempo**: Speed of the music in beats per minute (BPM). 
+- **RMS (Root Mean Square Energy)**: Average energy level of the audio signal, indicating loudness.
+- **ZCR (ZeroCrossing Rate)**: Frequency with which the signal changes from positive to negative, often used to detect percussive sounds.
+- **Harmonic Component**: Part of the signal with consistent, harmonic frequencies (melody).
+- **Percussive Component**: Part of the signal with abrupt changes, often representing drum or beat sounds.
+- **Spectral Centroid**: The "center of mass" of the spectrum, associated with the perceived brightness of a sound.
+- **Spectral Bandwidth**: Range of frequencies present in the sound, often associated with texture or timbre.
+- **Spectral Roll-off**: Frequency below which a set percentage (usually 85%) of the signal energy is contained, indicating the "edge" of the spectrum.
+- **Chroma**: Representation of the energy in each of the 12 musical pitches, disregarding octave, capturing harmonic elements.
+- **STFT (Short-Time Fourier Transform)**: Time-frequency representation of the signal, analyzing how frequency components evolve over time.
+- **MFCC (Mel-Frequency Cepstral Coefficients)**: Encodes the timbral qualities of the sound, useful for identifying vocal and instrument characteristics.
    - **Storing Features**: After extraction, features from each clip are saved in a structured CSV file. This file is then used as the input data for the model.
 
 ### 3. Building and Training the Model
