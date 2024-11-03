@@ -45,9 +45,10 @@ Here’s a model comparison table based on the project information provided:
    - **Library Used**: `pickle` in Python, which serializes the model, allowing it to be reloaded without retraining.
 
 ### 5. Building the Web Application
-   **Framework**: Flask (Python) serves as the backend to handle requests and load the machine learning model.
-    **Frontend**: HTML, CSS, and JavaScript are used to create an interactive web interface.
-    **Structure**:
+   - **Framework**: Flask (Python) serves as the backend to handle requests and load the machine learning model.
+   - **Frontend**: HTML, CSS, and JavaScript are used to create an interactive web interface.
+   -  **Structure**:
+     
       **Home**: Introduction to Muzec
       
    ![image](https://github.com/houda-moudni/Music-Genre-Classification/blob/main/static/images/Screens/home_page.png)
