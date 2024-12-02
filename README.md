@@ -67,3 +67,7 @@ Here’s a model comparison table based on the project information provided:
      - The backend processes the file, extracts audio features, and applies the trained model.
      - The genre prediction is returned to the user and displayed on the page.
 
+## About 
+For more information, feel free to contact me at **houdamoudni.01@gmail.com**.
+
+**Houda Moudni**
